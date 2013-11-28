@@ -6,31 +6,17 @@ namespace Tests
     [TestFixture]
     public class Class1
     {
-        [Test]
-        public void ShouldCreateaBusinessClassForTheSelectedProduct()
+        [TestCase("car", "car")]
+        [TestCase("Bike", "bike")]
+        [TestCase("carkjfkldjfksdjfk", "undefined")]
+        public void ShouldCreateaBusinessClassForTheSelectedProduct(string product, string expected)
         {
-            string product = "bike";
-
             //call the factory class
             var factoryclass = new Factoryclass();
-            Vehicle businessObject = factoryclass.GetTheSelecteditem(product);
+            Vehicle businessObject = factoryclass.GetTheSelecteditem(product.ToLower());
             Assert.IsInstanceOf(typeof (Vehicle), businessObject);
-            Assert.That(businessObject.Buy(), Is.EqualTo("undefined"));
+            Assert.That(businessObject.Buy(), Is.EqualTo(expected));
         }
-
-
-        [Test]
-        public void ShouldBe()
-        {
-
-            string product = "Car";
-
-            var factoryclass = new Factoryclass();
-            Vehicle businessObject = factoryclass.GetTheSelecteditem(product);
-            var car = businessObject.Buy();
-            Assert.That(car ,Is.EqualTo("car"));
-        }
-
     }
 
     public abstract class Vehicle
@@ -42,12 +28,25 @@ namespace Tests
     {
         public Vehicle GetTheSelecteditem(string product)
         {
-            if (product.ToLower() == "car")
+            if (product == "car")
             {
                 Vehicle car = new Car();
                 return car;
             }
+            if (product == "bike")
+            {
+                var bike = new Bike();
+                return bike;
+            }
             return new Undefined();
+        }
+    }
+
+    public class Bike :Vehicle
+    {
+        public override string Buy()
+        {
+            return "bike".ToLower();
         }
     }
 
