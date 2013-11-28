@@ -1,0 +1,7 @@
+U:\Visual Studio 2012\Projects\Factory\Src\Tests\bin\Debug\Tests.dll
+U:\Visual Studio 2012\Projects\Factory\Src\Tests\bin\Debug\Tests.pdb
+U:\Visual Studio 2012\Projects\Factory\Src\Tests\bin\Debug\nunit.framework.dll
+U:\Visual Studio 2012\Projects\Factory\Src\Tests\bin\Debug\nunit.framework.xml
+U:\Visual Studio 2012\Projects\Factory\Src\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+U:\Visual Studio 2012\Projects\Factory\Src\Tests\obj\Debug\Tests.dll
+U:\Visual Studio 2012\Projects\Factory\Src\Tests\obj\Debug\Tests.pdb
