@@ -1,4 +1,5 @@
-﻿using FactoryPattern;
+﻿using System;
+using FactoryPattern.Factory;
 using NUnit.Framework;
 
 namespace Tests

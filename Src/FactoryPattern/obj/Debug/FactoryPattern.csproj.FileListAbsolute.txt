@@ -1,2 +1,7 @@
 \\insurance\filedata\SiteHome\IT\RBothiraj\Visual Studio 2012\Projects\Factory\FactoryPattern\FactoryPattern\bin\Debug\FactoryPattern.exe.config
 U:\Visual Studio 2012\Projects\Factory\Src\FactoryPattern\bin\Debug\FactoryPattern.exe.config
+U:\Visual Studio 2012\Projects\Factory\Src\FactoryPattern\bin\Debug\FactoryPattern.exe
+U:\Visual Studio 2012\Projects\Factory\Src\FactoryPattern\bin\Debug\FactoryPattern.pdb
+U:\Visual Studio 2012\Projects\Factory\Src\FactoryPattern\obj\Debug\FactoryPattern.csprojResolveAssemblyReference.cache
+U:\Visual Studio 2012\Projects\Factory\Src\FactoryPattern\obj\Debug\FactoryPattern.exe
+U:\Visual Studio 2012\Projects\Factory\Src\FactoryPattern\obj\Debug\FactoryPattern.pdb
