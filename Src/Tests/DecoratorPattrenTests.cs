@@ -63,6 +63,40 @@ namespace Tests
             Assert.That(design, Is.EqualTo("Step with chocklateToppings"));
             Assert.That(price, Is.EqualTo(70.3m));
         }
+
+
+        [Test]
+        public void ShouldAllowToaddMultipleToppingToTheCakes()
+        {
+            var birthDayCakes = new BirthDayCakes();
+            var chocklate = new Chocklate(birthDayCakes);
+            Bakery fruit = new Fruit(chocklate);
+
+            var design = fruit.SelectCakesDesign();
+            var price = fruit.CalculatethePrice();
+            Assert.That(design, Is.EqualTo("MickeyMouse with chocklateToppings ,with fruit"));
+            Assert.That(price, Is.EqualTo(130m));
+        }
+    }
+
+    public class Fruit : Bakery
+    {
+        private readonly Chocklate _chocklate;
+
+        public Fruit(Chocklate chocklate)
+        {
+            _chocklate = chocklate;
+        }
+
+        public override string SelectCakesDesign()
+        {
+            return string.Format("{0} ,with fruit", _chocklate.SelectCakesDesign());
+        }
+
+        public override decimal CalculatethePrice()
+        {
+            return _chocklate.CalculatethePrice() + 10m;
+        }
     }
 
     public class Chocklate: Bakery
