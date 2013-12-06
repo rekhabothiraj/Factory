@@ -33,9 +33,7 @@ namespace Tests
             Assert.That(cakeDesign, Is.EqualTo("MickeyMouse"));
             Assert.That(price, Is.EqualTo(100m));
         }
-
-
-
+        
 
         [Test]
         public void ShouldBeAbleToAddToppingsToBirthDayCakes()
@@ -76,6 +74,14 @@ namespace Tests
             var price = fruit.CalculatethePrice();
             Assert.That(design, Is.EqualTo("MickeyMouse with chocklateToppings ,with fruit"));
             Assert.That(price, Is.EqualTo(130m));
+        }
+        
+        [Test]
+        public void ShouldAllowToaddToppingsInMultipleWays()
+        {
+            var fruit = new Fruit(new Chocklate(new Wedding()));
+            var calculatethePrice = fruit.CalculatethePrice();
+            Assert.That(calculatethePrice, Is.EqualTo(80.3m));
         }
     }
 
